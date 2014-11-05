@@ -1,39 +1,40 @@
 # == Class: jpeg
 #
-# Full description of class jpeg here.
+# This class manages jpeg packages on RedHat and Debian systems.
 #
 # === Parameters
 #
 # Document parameters here.
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# [*dev_package_name*]
+#   This sets the name value for the jpeg-devel package resource.
+#
+# [*ensure_pkg*]
+#   This sets the ensure value for the jpeg package resource.
+#
+# [*ensure_dev_pkg*]
+#   This sets the ensure value for the jpeg-devel package resource.
+#
+# [*package_name*]
+#   This sets the name value for the jpeg package resource.
 #
 # === Variables
 #
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
+# This class has no variables.
 #
 # === Examples
 #
 #  class { jpeg:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
+#    ensure_dev_pkg => 'installed',
 #  }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Damon Conway <vstraylight@gmail.com>
 #
 # === Copyright
 #
-# Copyright 2014 Your name here, unless otherwise noted.
+# Copyright 2014 Damon Conway
 #
 class jpeg (
   $dev_package_name = $jpeg::params::dev_package_name,
