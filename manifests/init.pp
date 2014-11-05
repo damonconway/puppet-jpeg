@@ -15,6 +15,9 @@
 # [*ensure_dev_pkg*]
 #   This sets the ensure value for the jpeg-devel package resource.
 #
+# [*install_options*]
+#   This sets the install_options value for all package resources.
+#
 # [*package_name*]
 #   This sets the name value for the jpeg package resource.
 #
@@ -38,9 +41,10 @@
 #
 class jpeg (
   $dev_package_name = $jpeg::params::dev_package_name,
-  $ensure_pkg = 'installed',
-  $ensure_dev_pkg = 'absent',
-  $package_name   = $jpeg::params::package_name
+  $ensure_pkg       = 'installed',
+  $ensure_dev_pkg   = 'absent',
+  $install_options  = undef,
+  $package_name     = $jpeg::params::package_name
 ) inherits jpeg::params {
 
   include jpeg::install

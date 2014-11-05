@@ -2,13 +2,15 @@
 class jpeg::install {
 
   package { 'jpeg':
-    ensure => $ensure_pkg,
-    name   => $package_name,
+    ensure          => $jpeg::ensure_pkg,
+    install_options => $jpeg::install_options,
+    name            => $jpeg::package_name,
   }
 
   package { 'jpeg-devel':
-    ensure => $ensure_dev_pkg,
-    name   => $dev_package_name,
+    ensure          => $jpeg::ensure_dev_pkg,
+    install_options => $jpeg::install_options,
+    name            => $jpeg::dev_package_name,
   }
 
 }
