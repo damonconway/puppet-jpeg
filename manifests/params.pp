@@ -5,20 +5,20 @@ class jpeg::params () {
     'RedHat': {
       case $::lsbmajdistrelease {
         '5': {
-          $package_name     = 'libjpeg'
           $dev_package_name = 'libjpeg-devel'
+          $package_name     = 'libjpeg'
         }
     
         default: {
-          $package_name     = 'libjpeg-turbo'
           $dev_package_name = 'libjpeg-turbo-devel'
+          $package_name     = 'libjpeg-turbo'
         }
       }
     }
 
     'Debian': {
-       $package_name     = 'libjpeg-turbo8'
        $dev_package_name = 'libjpeg-turbo-dev'
+       $package_name     = 'libjpeg-turbo8'
     }
   }
 
